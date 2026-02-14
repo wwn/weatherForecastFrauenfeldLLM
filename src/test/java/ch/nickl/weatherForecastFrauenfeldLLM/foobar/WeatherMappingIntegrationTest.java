@@ -1,4 +1,4 @@
-package ch.nickl.weatherForecastFrauenfeldLLM.persistence;
+package ch.nickl.weatherForecastFrauenfeldLLM.foobar;
 
 import ch.nickl.weatherForecastFrauenfeldLLM.domain.model.WeatherSnapshotEntity;
 import ch.nickl.weatherForecastFrauenfeldLLM.interfaces.rest.dto.OpenMeteoWeatherSnapshotResponseDto;
