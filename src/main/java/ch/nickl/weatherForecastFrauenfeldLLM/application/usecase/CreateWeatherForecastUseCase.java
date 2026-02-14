@@ -2,7 +2,7 @@ package ch.nickl.weatherForecastFrauenfeldLLM.application.usecase;
 
 import ch.nickl.weatherForecastFrauenfeldLLM.domain.event.WeatherSnapshotCreatedEvent;
 import ch.nickl.weatherForecastFrauenfeldLLM.domain.model.WeatherSnapshotEntity;
-import ch.nickl.weatherForecastFrauenfeldLLM.infrastructure.WeatherPrognoseProvider;
+import ch.nickl.weatherForecastFrauenfeldLLM.infrastructure.WeatherForecastProvider;
 import ch.nickl.weatherForecastFrauenfeldLLM.infrastructure.annotation.UseCase;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.event.Observes;
@@ -18,7 +18,7 @@ import java.util.List;
 public class CreateWeatherForecastUseCase {
 
     @Inject
-    WeatherPrognoseProvider aiService;
+    WeatherForecastProvider aiService;
 
     void onWeatherSnapshotCreated(@Observes WeatherSnapshotCreatedEvent event) {
         log.info("generating new weather forecast...");
