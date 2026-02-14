@@ -1,0 +1,28 @@
+CREATE TABLE weather_snapshot
+(
+    id                   BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    latitude DOUBLE PRECISION NOT NULL,
+    longitude DOUBLE PRECISION NOT NULL,
+    time                 VARCHAR(255),
+    interval_sec         INT,
+    temperature_2m DOUBLE PRECISION,
+    relative_humidity_2m INT,
+    apparent_temperature DOUBLE PRECISION,
+    is_day               INT,
+    precipitation DOUBLE PRECISION,
+    rain DOUBLE PRECISION,
+    showers DOUBLE PRECISION,
+    snowfall DOUBLE PRECISION,
+    weather_code         INT,
+    cloud_cover          INT,
+    pressure_msl DOUBLE PRECISION,
+    surface_pressure DOUBLE PRECISION,
+    wind_speed_10m DOUBLE PRECISION,
+    wind_direction_10m   INT,
+    wind_gusts_10m DOUBLE PRECISION,
+    dew_point_2m DOUBLE PRECISION,
+    uv_index DOUBLE PRECISION,
+    visibility DOUBLE PRECISION,
+    snow_depth DOUBLE PRECISION,
+    created_at           TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
